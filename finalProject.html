@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfectly Portioned Fitness - Meal Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src=" https://wcet.waketech.edu/cajackson6/Final%20Project/PerfectlyPortionedFitness.png" alt="Perfectly Portioned Fitness Logo" class="logo">
+        <h1 class="title">Perfectly Portioned Fitness Meal Planner</h1>
+    </div>
+    <div class="content">
+        <form id="mealPlanForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your full name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email address" required><br><br>
+            <label for="goal">Goal for the Week:</label>
+            <input type="text" id="goal" placeholder="e.g., Lose 2 pounds, Eat 1800 calories/day" required><br><br>
+
+            <fieldset>
+                <legend>Enter Your Meals for Each Day</legend>
+                <!-- Entries for each day -->
+                <!-- Monday -->
+                <div id="Monday">
+                    <h3>Monday</h3>
+                    <label for="monBreakfast">Breakfast:</label>
+                    <input type="text" id="monBreakfast" placeholder="What will you have for breakfast?" required><br>
+                    <label for="monSnack1">Snack 1:</label>
+                    <input type="text" id="monSnack1" placeholder="Your first snack of the day" required><br>
+                    <label for="monLunch">Lunch:</label>
+                    <input type="text" id="monLunch" placeholder="What's for lunch?" required><br>
+                    <label for="monSnack2">Snack 2:</label>
+                    <input type="text" id="monSnack2" placeholder="Your second snack of the day" required><br>
+                    <label for="monDinner">Dinner:</label>
+                    <input type="text" id="monDinner" placeholder="Dinner plans?" required><br>
+                </div>
+                <!-- Tuesday -->
+                <div id="Tuesday">
+                    <h3>Tuesday</h3>
+                    <label for="tueBreakfast">Breakfast:</label>
+                    <input type="text" id="tueBreakfast" placeholder="What will you have for breakfast?" required><br>
+                    <label for="tueSnack1">Snack 1:</label>
+                    <input type="text" id="tueSnack1" placeholder="Your first snack of the day" required><br>
+                    <label for="tueLunch">Lunch:</label>
+                    <input type="text" id="tueLunch" placeholder="What's for lunch?" required><br>
+                    <label for="tueSnack2">Snack 2:</label>
+                    <input type="text" id="tueSnack2" placeholder="Your second snack of the day" required><br>
+                    <label for="tueDinner">Dinner:</label>
+                    <input type="text" id="tueDinner" placeholder="Dinner plans?" required><br>
+                </div>
+                <!-- Wednesday -->
+                <div id="Wednesday">
+                    <h3>Wednesday</h3>
+                    <label for="wedBreakfast">Breakfast:</label>
+                    <input type="text" id="wedBreakfast" placeholder="What will you have for breakfast?" required><br>
+                    <label for="wedSnack1">Snack 1:</label>
+                    <input type="text" id="wedSnack1" placeholder="Your first snack of the day" required><br>
+                    <label for="wedLunch">Lunch:</label>
+                    <input type="text" id="wedLunch" placeholder="What's for lunch?" required><br>
+                    <label for="wedSnack2">Snack 2:</label>
+                    <input type="text" id="wedSnack2" placeholder="Your second snack of the day" required><br>
+                    <label for="wedDinner">Dinner:</label>
+                    <input type="text" id="wedDinner" placeholder="Dinner plans?" required><br>
+                </div>
+                <!-- Thursday -->
+                <div id="Thursday">
+                    <h3>Thursday</h3>
+                    <label for="thuBreakfast">Breakfast:</label>
+                    <input type="text" id="thuBreakfast" placeholder="What will you have for breakfast?" required><br>
+                    <label for="thuSnack1">Snack 1:</label>
+                    <input type="text" id="thuSnack1" placeholder="Your first snack of the day" required><br>
+                    <label for="thuLunch">Lunch:</label>
+                    <input type="text" id="thuLunch" placeholder="What's for lunch?" required><br>
+                    <label for="thuSnack2">Snack 2:</label>
+                    <input type="text" id="thuSnack2" placeholder="Your second snack of the day" required><br>
+                    <label for="thuDinner">Dinner:</label>
+                    <input type="text" id="thuDinner" placeholder="Dinner plans?" required><br>
+                </div>
+                <!-- Friday -->
+                <div id="Friday">
+                    <h3>Friday</h3>
+                    <label for="friBreakfast">Breakfast:</label>
+                    <input type="text" id="friBreakfast" placeholder="What will you have for breakfast?" required><br>
+                    <label for="friSnack1">Snack 1:</label>
+                    <input type="text" id="friSnack1" placeholder="Your first snack of the day" required><br>
+                    <label for="friLunch">Lunch:</label>
+                    <input type="text" id="friLunch" placeholder="What's for lunch?" required><br>
+                    <label for="friSnack2">Snack 2:</label>
+                    <input type="text" id="friSnack2" placeholder="Your second snack of the day" required><br>
+                    <label for="friDinner">Dinner:</label>
+                    <input type="text" id="friDinner" placeholder="Dinner plans?" required><br>
+                </div>
+                <!-- Saturday -->
+                <div id="Saturday">
+                    <h3>Saturday</h3>
+                    <label for="satBreakfast">Breakfast:</label>
+                    <input type="text" id="satBreakfast" placeholder="What will you have for breakfast?" required><br>
+                    <label for="satSnack1">Snack 1:</label>
+                    <input type="text" id="satSnack1" placeholder="Your first snack of the day" required><br>
+                    <label for="satLunch">Lunch:</label>
+                    <input type="text" id="satLunch" placeholder="What's for lunch?" required><br>
+                    <label for="satSnack2">Snack 2:</label>
+                    <input type="text" id="satSnack2" placeholder="Your second snack of the day" required><br>
+                    <label for="satDinner">Dinner:</label>
+                    <input type="text" id="satDinner" placeholder="Dinner plans?" required><br>
+                </div>
+                <!-- Sunday -->
+                <div id="Sunday">
+                    <h3>Sunday</h3>
+                    <label for="sunBreakfast">Breakfast:</label>
+                    <input type="text" id="sunBreakfast" placeholder="What will you have for breakfast?" required><br>
+                    <label for="sunSnack1">Snack 1:</label>
+                    <input type="text" id="sunSnack1" placeholder="Your first snack of the day" required><br>
+                    <label for="sunLunch">Lunch:</label>
+                    <input type="text" id="sunLunch" placeholder="What's for lunch?" required><br>
+                    <label for="sunSnack2">Snack 2:</label>
+                    <input type="text" id="sunSnack2" placeholder="Your second snack of the day" required><br>
+                    <label for="sunDinner">Dinner:</label>
+                    <input type="text" id="sunDinner" placeholder="Dinner plans?" required><br>
+                </div>
+            </fieldset>
+            
+            <button type="button" id="generateButton">Generate Meal Plan</button>
+            <button type="reset">Clear</button>
+            <button type="button" onclick="printMealPlan()">Print</button>
+            <button type="button" id="downloadButton">Download</button>
+        </form>
+    </div>
+    <script src="projectJS.js"></script>
+</body>
+</html>
